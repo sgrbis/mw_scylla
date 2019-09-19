@@ -1,0 +1,18 @@
+#keyspace creation
+CREATE KEYSPACE tt WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
+
+
+#table creation
+CREATE TABLE tt.similarity_table (
+    ifa text,
+    bundle_id text,
+    city text,
+    app_name text,
+    device_model text,
+    iab_category text,
+    os text,
+    state text,
+    timestamp text,
+    PRIMARY KEY ((app_name), bundle_id,timestamp));
+
+#Contact for configs, write_consistency etc..
